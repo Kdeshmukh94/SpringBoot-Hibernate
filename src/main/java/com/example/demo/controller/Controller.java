@@ -30,7 +30,14 @@ public class Controller {
 		
 		return new ResponseEntity<>(employee, HttpStatus.CREATED);
 	}
-	
+
+	/**
+	 * End point to update existing employee
+	 *
+	 * @param id
+	 * @param employee
+	 * @return Employee
+	 */
 	@PutMapping("/saveEmployee/{id}")
 	public ResponseEntity<Employee> updateEmployee(@PathVariable("id") int id, @RequestBody Employee employee) {
 		
